@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2026 財富講座報名</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="row row-title">
+        <div class="title-block">
+          <div class="mini-tag">專業規劃 • 穩健傳承 • 守護幸福</div>
+          <h1>2026 財富講座報名</h1>
+          <div class="subtitle">
+            <span>稅務</span>
+            <span>×</span>
+            <span>法律</span>
+            <span>×</span>
+            <span>財務</span>
+            <span>×</span>
+            <span>信託</span>
+            <span>全方位的傳承策略</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="row row-banner">
+        <img src="cover.png" alt="2026 財富講座活動橫幅" />
+      </section>
+
+      <section class="row row-main">
+        <article class="activity-panel">
+          <h2>講座內容</h2>
+          <ul class="agenda-list">
+            <li><span>08:00</span> 報到</li>
+            <li><span>08:30</span> 講座開始</li>
+            <li><span>09:30</span> 休息</li>
+            <li><span>09:40</span> 講座開始</li>
+          </ul>
+        </article>
+
+        <form id="signup-form" class="signup-form" novalidate>
+          <h2>立即報名</h2>
+          <div class="field-grid">
+            <label>
+              <span>姓名</span>
+              <input type="text" name="name" required placeholder="請輸入姓名" />
+            </label>
+
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required placeholder="請輸入 Email" />
+            </label>
+
+            <label>
+              <span>單位</span>
+              <input type="text" name="department" placeholder="請輸入單位" />
+            </label>
+
+            <label>
+              <span>電話</span>
+              <input type="tel" name="phone" required placeholder="請輸入電話" />
+            </label>
+
+            <label class="full-width">
+              <span>職稱</span>
+              <input type="text" name="title" placeholder="請輸入職稱" />
+            </label>
+          </div>
+
+          <button type="submit" class="submit-btn">送出報名</button>
+          <p id="form-message" class="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

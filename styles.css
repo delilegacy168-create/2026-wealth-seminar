@@ -1,0 +1,232 @@
+:root {
+  --primary: #0b3b7a;
+  --primary-soft: #1c6dc1;
+  --gold: #f5c96a;
+  --gold-deep: #d9a63f;
+  --bg: #eef7ff;
+  --panel: #fefbf4;
+  --text: #1f2d3d;
+  --muted: #49607d;
+  --success: #1d8f5f;
+  --danger: #d14d4d;
+  --shadow: 0 18px 40px rgba(20, 63, 121, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: linear-gradient(180deg, #dff2ff 0%, #eef9ff 100%);
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.page-shell {
+  width: min(1200px, calc(100% - 32px));
+  margin: 24px auto 48px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.row {
+  width: 100%;
+}
+
+.row-title {
+  background: linear-gradient(135deg, rgba(10, 74, 150, 0.85), rgba(84, 160, 223, 0.82));
+  padding: 24px 28px 18px;
+  border-bottom: 4px solid var(--gold);
+}
+
+.title-block {
+  text-align: center;
+  color: #fff;
+}
+
+.mini-tag {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 18px 0 12px;
+  font-size: clamp(2rem, 3vw, 3.1rem);
+  font-weight: 900;
+  letter-spacing: 0.09em;
+}
+
+.subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: clamp(0.95rem, 1.6vw, 1.4rem);
+  font-weight: 700;
+  color: #f7f6ef;
+}
+
+.subtitle span:nth-child(odd) {
+  color: #fff6cb;
+}
+
+.row-banner {
+  background: #dceeff;
+}
+
+.row-banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.row-main {
+  display: grid;
+  grid-template-columns: 1.05fr 1.3fr;
+  gap: 24px;
+  padding: 28px;
+  background: linear-gradient(180deg, rgba(249, 253, 255, 0.95), rgba(234, 245, 255, 1));
+}
+
+.activity-panel,
+.signup-form {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(93, 126, 165, 0.15);
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: 0 12px 24px rgba(22, 85, 162, 0.08);
+}
+
+.activity-panel h2,
+.signup-form h2 {
+  margin: 0 0 18px;
+  color: var(--primary);
+  font-size: clamp(1.6rem, 2vw, 2.1rem);
+}
+
+.agenda-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.agenda-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(12, 87, 177, 0.04);
+}
+
+.agenda-list li span {
+  display: inline-block;
+  min-width: 72px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(246, 200, 93, 0.25), rgba(250, 236, 186, 0.7));
+  color: var(--primary);
+  font-weight: 900;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 18px 18px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+label span {
+  font-size: 1rem;
+}
+
+label input {
+  width: 100%;
+  border: 1px solid rgba(21, 70, 129, 0.2);
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  color: var(--text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+label input:focus {
+  outline: none;
+  border-color: var(--primary-soft);
+  box-shadow: 0 0 0 4px rgba(28, 109, 193, 0.12);
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.submit-btn {
+  margin-top: 22px;
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--primary-soft), var(--primary));
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 800;
+  padding: 15px 20px;
+  cursor: pointer;
+  box-shadow: 0 14px 22px rgba(11, 59, 122, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 26px rgba(11, 59, 122, 0.3);
+}
+
+.form-message {
+  min-height: 24px;
+  margin: 12px 0 0;
+  font-weight: 700;
+}
+
+.form-message.success {
+  color: var(--success);
+}
+
+.form-message.error {
+  color: var(--danger);
+}
+
+@media (max-width: 860px) {
+  .row-main {
+    grid-template-columns: 1fr;
+  }
+
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+}
