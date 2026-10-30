@@ -1,4 +1,6 @@
-spec/
+/spec/
+/docs/
+/apps-script/
 node_modules/
 .DS_Store
 .env
